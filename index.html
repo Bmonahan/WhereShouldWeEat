@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Where Should We Eat</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="navBar">
+      <div class="top_nav">
+        <div id="location_search">
+          <input id="address" type="textbox" value="Orono, Maine">
+          <input id="submit" type="button" value="Search">
+        </div>
+        <button id="findRes">Find Resturants</button>
+        <button id="findCafe">Find Cafe</button>
+      </div>
+      <div class="range_slider">
+        <input type="range" min="100" max="10000" value="1000" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+      <div class="places">
+        <table id="placesList" align='center'>
+          <th>Name</th>
+        </table>
+      </div>
+    </div>
+    <script src="javascript/createMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOawhq7XKR9O9gKzRJkFzBSvXuCYIVXk0&callback=initMap&libraries=places"async defer></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOawhq7XKR9O9gKzRJkFzBSvXuCYIVXk0&libraries=places"></script> -->
+    <script src="javascript/addResturants.js"></script>
+    <script src='javascript/range_slider.js'></script>
+  </body>
+</html>
